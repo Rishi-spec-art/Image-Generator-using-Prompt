@@ -18,5 +18,5 @@ input = {
 }
 #=> " Of course, I'd be happy to help! Tailoring a men's suit...
 
-output = replicate.run("meta/llama-2-7b-chat", input = {"prompt":prompt}, max_length = 300)
+output = replicate.run("meta/llama-2-7b-chat", input = {"prompt":prompt}, "max_length" = 300)
 st.write("".join(output))
