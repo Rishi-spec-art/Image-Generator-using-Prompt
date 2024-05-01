@@ -18,7 +18,5 @@ input = {
 }
 #=> " Of course, I'd be happy to help! Tailoring a men's suit...
 
-for event in replicate.stream(
-    "meta/llama-2-7b-chat",
-    input=input):
-  st.write(event, end="")
+output = replicate.run("meta/llama-2-7b-chat", input = {"prompt":prompt})
+st.write(output)
