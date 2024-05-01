@@ -18,5 +18,10 @@ input = {
 }
 #=> " Of course, I'd be happy to help! Tailoring a men's suit...
 
-output = replicate.run("meta/llama-2-7b-chat", input = input)
-st.write("".join(output))
+# output = replicate.run("meta/llama-2-7b-chat", input = input)
+output = replicate.run(
+  "stability-ai/sdxl:39ed52f2a78e934b3ba6e2a89f5b1c712de7dfea535525255b1aa35c5565e08b",
+  input={"prompt": prompt}
+)
+st.image(output[0])
+# st.write("".join(output))
