@@ -19,4 +19,4 @@ input = {
 #=> " Of course, I'd be happy to help! Tailoring a men's suit...
 
 output = replicate.run("meta/llama-2-7b-chat", input = {"prompt":prompt})
-st.write(output)
+st.write("".join(output))
